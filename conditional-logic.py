@@ -26,3 +26,14 @@ else:
 # And statement - both statements must be true
 # Or statement - either statement can be true - atleast one of the statements must be true
 
+#Nested if statements - if statements within if statements
+# lets you check a second condition only after the first one has passed.
+age = int(input("What is your age? "))
+if age >= 18:
+    print("You are an adult.")
+    if age >= 65:
+        print("You are a senior citizen.")
+else:
+    print("You are not an adult.")
+
+
