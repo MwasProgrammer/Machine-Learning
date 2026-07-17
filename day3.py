@@ -18,6 +18,6 @@ try:
     print(f"\n Quotient = {float_first_number / float_second_number}")
     print(f" Remainder = {float_first_number % float_second_number}") # Modulus operator to get the remainder
     print(f"No remainder = {float_first_number // float_second_number}") # Floor division operator to get the quotient without remainder
-
+                
 except ZeroDivisionError:
     print("Error: Division by zero is not allowed.")
