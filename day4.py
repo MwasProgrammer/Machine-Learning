@@ -15,12 +15,14 @@ boolean_cold_shower = False
 target_pages_read = 20
 
 actual_steps = int(input("How many steps did you take today? "))
-actual_shower = input("Did you take a cold shower today? (yes/no) ")
+shower_input = input("Did you take a cold shower today? (True/False) ")
 
-if actual_steps >= target_steps and actual_shower == "yes":
+actual_shower = shower_input.lower() == 'false'
+
+if actual_steps >= target_steps and actual_shower == boolean_cold_shower:
     print("Excellent! You have met your daily discipline goals.")
 
-    if actual_steps < target_steps or actual_shower != "yes":
+    if actual_steps < target_steps or actual_shower != boolean_cold_shower:
         print(f"Keep pushing, your goals are within reach! You walked {actual_steps}")
 
 else:
