@@ -28,3 +28,6 @@ print("Removed double occurring item:", skills)
 # Pop method
 skills.pop(-1)
 print(f"List of skills after pop method: {skills}")
+
+skills.sort(reverse=True)
+print(f"Sorted list: {skills}")
