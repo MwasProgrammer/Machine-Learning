@@ -1,8 +1,7 @@
 # A function called day_report(steps, water, protocol) that prints a formatted report of a day's discipline data.
 
-print(f"Day's habit track report.")
 def day_report(day, steps, water, protocol):
-    print(f"Day log: {day} report")
+    print(f"\nDay log: {day} report")
     print(f"Steps walked: {steps}.")
     print(f"Glasses of water drank: {water}.")
     print(f"Fasting protocol: {protocol}")
@@ -10,12 +9,10 @@ def day_report(day, steps, water, protocol):
 
 #Step goals tracker
 def hit_goals(steps):
-    for step in steps:
-        if step >= 8000:
-            return print('True')
-        else:
-            return print('False')
-
+    if steps >= 8000:
+        return True
+    else:
+        return False
 
 day_log = [
     {"day" : "Monday", "steps" : 3500, "water" : 8, "protocol" : "0MAD"},
@@ -23,5 +20,15 @@ day_log = [
     {"day" : "Wednesday", "steps" : 7987, "water" : 4, "protocol" : "2MAD"}
 ]
 
-day_report(steps, water, protocol)
-hit_goals(steps)
+print(f"Day's habit track report.")
+
+for entry in day_log:
+    day = entry["day"]
+    steps = entry["steps"]
+    water = entry["water"]
+    protocol = entry["protocol"]    
+
+    day_report(day, steps, water, protocol)
+
+    goal_reached = hit_goals(steps)
+    print(f"Steps target for {day} reached? {goal_reached}!\n")
