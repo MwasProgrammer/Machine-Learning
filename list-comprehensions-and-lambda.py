@@ -22,3 +22,16 @@ print(f"\nSteps walked: {weekly_steps} | \nSteps in KM: {km_walked}")
 calories_burned = [round(steps * 0.04, 2) for steps in weekly_steps]
 print("Calories burned: ", calories_burned)
 
+print(f"\n Filtering a list of dictionaries using list comprehensions.")
+
+clients = [
+    {"name" : "Peter", "goal" : "fat-loss", "sessions" : 4},
+    {"name" : "John", "goal" : "muscle gain", "sessions" : 5},
+    {"name" : "Jane", "goal" : "fat-loss", "sessions" : 3},
+    {"name" : "Kate", "goal" : "endurance", "sessions" : 7},
+    {"name" : "James", "goal" : "fat-loss", "sessions" : 2},
+]
+
+print("Filtering clients with fat-loss goal using list comprehensions.")
+fat_loss_clients = [client["name"]for client in clients if client["goal"] == "fat-loss"]
+print(f"\nClients with fat-loss goal: {fat_loss_clients}")
