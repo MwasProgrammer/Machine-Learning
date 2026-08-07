@@ -5,5 +5,10 @@ step_profile = [
     {"name" : "Jay", "steps" : [7648, 9863, 10972, 6351, 8592, 5838, 9322]},
 ]
 
-steps_above_10000 = [profile for profile in step_profile if (step > 10000 for step in profile["steps"])]
-print(f"Profiles with steps above 10000: {steps_above_10000}")
+step_above_10000 = [day_steps for profile in step_profile for day_steps in profile["steps"] if day_steps > 10000]
+print(f"\nList of profiles with steps above 10000: {step_above_10000}")
+
+average_steps = [round(sum(profile["steps"]) / len(profile["steps"]), 2) for profile in step_profile]
+average_steps_above_8500 = [profile["name"] for profile, avg in zip(step_profile, average_steps) if avg > 8500]
+print(f"\nList of profiles with average steps above 8500: {average_steps_above_8500}")
+    
