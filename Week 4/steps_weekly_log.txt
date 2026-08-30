@@ -1,0 +1,8 @@
+
+Monday: 7643
+Tuesday: 8650
+Wednesday: 8971
+Thursday: 7647
+Friday: 10375
+Saturday: 5632
+Sunday: 4900
