@@ -1,0 +1,8 @@
+day,steps,sleep_hr,bench_press_kg,protocol,cold_shower
+Mon,9200,7.5,80,OMAD,True
+Tue,10500,8.0,82,2MAD,True
+Wed,8800,6.5,78,OMAD,False
+Thu,11000,7.0,85,OMAD,True
+Fri,7600,9.0,80,2MAD,True
+Sat,9400,7.5,83,OMAD,True
+Sun,10200,8.0,84,OMAD,True
